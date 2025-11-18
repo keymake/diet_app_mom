@@ -1,3 +1,5 @@
+from streamlit.runtime.storage import FileStorage
+
 import streamlit as st
 import pandas as pd
 from datetime import datetime, timedelta
@@ -5,10 +7,10 @@ from pathlib import Path
 import json
 
 # ---------------- 기본 설정 ----------------
+storage = FileStorage("data")
 
-DATA_FILE = Path("data.csv")
-CONFIG_FILE = Path("config.json")
-
+DATA_FILE = storage.path("data.csv")
+CONFIG_FILE = storage.path("config.json")
 
 # ---------------- 유틸 함수 ----------------
 
