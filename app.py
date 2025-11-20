@@ -314,7 +314,7 @@ def page_A():
     if not today_row.empty:
         today_weight_display = today_row.iloc[0]["weight"]
         if today_weight_display is not None:
-            st.info(f"오늘 T: {today_iso} / {today_weight_display} kg")
+            st.info(f"오늘 몸무게: {today_iso} / {today_weight_display} kg")
 
 
     st.markdown("---")
