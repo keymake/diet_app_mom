@@ -305,7 +305,7 @@ def page_A():
     last_T = find_last_T(df, today_iso)
     if last_T is not None:
         last_t_date, last_t_weight = last_T
-        st.info(f"직전 T: {last_t_date} / {last_t_weight} kg")
+        st.info(f"이전 몸무게: {last_t_date} / {last_t_weight} kg")
     else:
         last_t_date, last_t_weight = None, None
         st.info("직전 T 없음 (첫 기록)")
@@ -314,7 +314,7 @@ def page_A():
     if not today_row.empty:
         today_weight_display = today_row.iloc[0]["weight"]
         if today_weight_display is not None:
-            st.success(f"오늘 T 예정 몸무게: {today_weight_display} kg")
+            st.info(f"오늘 T: {today_iso} / {today_weight_display} kg")
 
 
     st.markdown("---")
