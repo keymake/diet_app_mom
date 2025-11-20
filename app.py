@@ -312,9 +312,9 @@ def page_A():
 
 # ---------------- 오늘 T 몸무게 표시 추가 ----------------
     if not today_row.empty:
-    today_weight_display = today_row.iloc[0]["weight"]
-    if today_weight_display is not None:
-        st.success(f"오늘 T 예정 몸무게: {today_weight_display} kg")
+        today_weight_display = today_row.iloc[0]["weight"]
+        if today_weight_display is not None:
+            st.success(f"오늘 T 예정 몸무게: {today_weight_display} kg")
 
 
     st.markdown("---")
